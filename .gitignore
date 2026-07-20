@@ -1,0 +1,8 @@
+\venv
+__pycache__
+creds.json
+**/*.csv
+businesses.csv
+.env
+
+/credentials

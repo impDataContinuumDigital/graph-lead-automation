@@ -1,0 +1,8 @@
+pandas
+gspread
+dnspython
+playwright
+requests
+beautifulsoup4
+langgraph
+scrapling[all]
