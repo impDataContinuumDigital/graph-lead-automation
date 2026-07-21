@@ -6,3 +6,6 @@ requests
 beautifulsoup4
 langgraph
 scrapling[all]
+langchain-groq
+langchain-core
+python-dotenv

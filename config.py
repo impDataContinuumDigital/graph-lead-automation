@@ -96,11 +96,11 @@ DROP_UNMATCHED = True
 # each location below to build the search query list.
 SEARCH_TERMS = [
     # "construction contractor",
-    "roofing company",
+    # "roofing company",
     # "HVAC company",
     # "plumbing company",
     # "remodeling contractor",
-    # "property management company",
+    "property management company",
     # "HOA management",
     # "apartment leasing office",
 ]
@@ -111,12 +111,12 @@ SEARCH_TERMS = [
 # once you've confirmed lead quality/volume is worth the extra time:
 SEARCH_LOCATIONS = [
     # "Toronto, ON",
-    "Vancouver, BC",
+    # "Vancouver, BC",
     # "Calgary, AB",
     # "Austin, TX",
     # "Dallas, TX",
-    # "Houston, TX",
-    # "Phoenix, AZ",
+    "Houston, TX",
+    "Phoenix, AZ",
     # "Atlanta, GA",
     # "Charlotte, NC",
     # "Tampa, FL",

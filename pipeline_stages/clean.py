@@ -27,7 +27,6 @@ COLUMN_ALIASES = {
     "source_url": ["source_url", "url", "website", "link"],
     "phone": ["phone", "phone_number", "contact_phone"],
     "address": ["address", "full_address", "location"],
-    "linkedin_url": ["linkedin_url", "linkedin", "linkedin_link"],
 }
 
 EMAIL_RE = re.compile(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
@@ -78,7 +77,6 @@ def clean(input_csv: str, output_csv: str):
     out["domain"] = [extract_domain(e, u) for e, u in zip(out["email"], out["source_url"])]
     out["phone"] = out["phone"].astype(str).str.strip().replace("nan", "")
     out["address"] = out["address"].astype(str).str.strip().replace("nan", "")
-    out["linkedin_url"] = out["linkedin_url"].astype(str).str.strip().replace("nan", "")
     out["scraped_at"] = datetime.now(timezone.utc).isoformat()
 
    # validate email safely
@@ -100,13 +98,14 @@ def clean(input_csv: str, output_csv: str):
 ] = ""
 
 # keep leads with email OR contact name
-    before = len(out)
+    # before = len(out)
 
-    out = out[
-    (out["email"] != "") |
-    (out["contact_name"] != "")]
+    # # out = out[
+    # # (out["email"] != "") |
+    # # (out["contact_name"] != "")]
 
-    dropped = before - len(out)
+    # dropped = before - len(out)
+    dropped = 0 
 
     out = out[RAW_COLUMNS]
     out.to_csv(output_csv, index=False)

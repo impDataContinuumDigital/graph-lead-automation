@@ -219,7 +219,6 @@ def run():
             r.get("address", ""),          # Address
             city,                           # City
             state,                          # State
-            r.get("linkedin_url", ""),     # LinkedIn URL
             r.get("classification", ""),   # Industry
             r.get("template_type", ""),    # Template Type
             status,                        # Website Status
